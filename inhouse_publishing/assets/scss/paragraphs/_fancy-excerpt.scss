@@ -1,0 +1,28 @@
+.paragraph--type--fancy-excerpt-title-box{
+
+}
+.field--name-field-excerpt-title{
+  @include heading3;
+  position: relative;
+  margin-bottom: 30px;
+  line-height: 20px;
+  &:after{
+    content: "";
+    width: 97%;
+    height: 2px;
+    background: $blue-line;
+    display: inline-block;
+  }
+}
+.field--name-field-excerpt-content{
+  padding-left: 65px;
+  padding-right: 155px;
+}
+.field--name-field-right-side-content{
+  > .field__item{
+    margin-bottom: 80px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+}

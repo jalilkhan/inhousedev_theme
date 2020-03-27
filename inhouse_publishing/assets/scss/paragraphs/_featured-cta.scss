@@ -1,0 +1,41 @@
+.featured-cta-wrapper{
+  background-color: #383838;
+  color: #fff;
+  margin-bottom: 150px;
+  .featured-cta-content{
+    width: 100%;
+    padding-left: 80px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    .field--name-field-cta-sub-heading{
+      font-family: $secondary-font;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 60px;
+    }
+    .field--name-field-cta-heading{
+      font-family: $secondary-font;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 74px;
+      float: left;
+      margin-right: 25px;
+    }
+    .field--name-field-cta-link{
+      position: relative;
+      top: 12px;
+      float: left;
+      a{
+        @include btn;
+        @include btn-yellow;
+        width: 226px;
+        padding: 19.5px 23px;
+        &:hover{
+          @include btn-yellow-hover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Bootstrap and its default variables
+@import "bootstrap/bootstrap";
+
+// Your style
+@import "variables";
+@import "general";
+@import "mixins";
+@import "components/navbar";
+@import "components/fields";
+@import "layout";
+@import "responsive";
+@import "paragraphs/hero-header-panel";
+@import "paragraphs/cta-panel";
+@import "paragraphs/the-difference-panel";
+@import "paragraphs/our-capabilities-panel";
+@import "paragraphs/cta-box";
+@import "paragraphs/responsive-image";
+@import "paragraphs/overlap-photos";
+@import "paragraphs/fancy-excerpt";
+@import "paragraphs/simple-excerpt";
+@import "paragraphs/section_two";
+@import "paragraphs/our-services";
+@import "paragraphs/featured-cta";
+@import "paragraphs/instore-panel";

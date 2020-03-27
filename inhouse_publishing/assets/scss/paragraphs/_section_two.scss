@@ -1,0 +1,19 @@
+.column-2-section{
+  margin-bottom: 150px;
+  .hero-right{
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+  .simple-excerpt-with-image{
+    .hero-left{
+      height: 100%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.paragraph--type--simple-excerpt-title-box{
+  .field--name-field-excerpt-title-{
+    @include heading2;
+    width: 100%;
+  }
+  .field--name-field-excerpt-content-simple{
+    padding-left: 65px;
+  }
+}

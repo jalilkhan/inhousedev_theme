@@ -1,0 +1,191 @@
+// HEADER
+.header {
+  position: relative;
+  transition-duration: .3s;
+  overflow: hidden;
+  z-index: 3;
+  background-color: #F4F4F4;
+  height: 94px;
+  .brand-logo {
+    a {
+      display: inline-block;
+      img {
+        width: 183px;
+        height: 72px;
+        object-fit: cover;
+        object-position: center;
+        transition-duration: .3s;
+        position: relative;
+        @media (max-width: 991px) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+    }
+  }
+  .header-menu {
+    float: right;
+    .menu-icon {
+      position: relative;
+      margin: 69px auto 0 auto;
+      padding-left: 1.25em;
+      width: 42px;
+      height: 28px;
+      cursor: pointer;
+      @media (max-width: 991px) {
+        margin-top: 22px;
+      }
+      .menu-global {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        transition: 0.3s;
+        border-top: 5px solid $secondary-color;
+        backface-visibility: hidden;
+        &.menu-top {
+          top: 0;
+        }
+        &.menu-middle {
+          top: 12px;
+        }
+        &.menu-bottom {
+          top: 24px;
+        }
+        &.menu-top-click {
+          top: 15px;
+          transform: rotate(90deg);
+          transition: 0.3s 0.3s;
+          backface-visibility: hidden;
+        }
+        &.menu-middle-click {
+          opacity: 0;
+          transition: 0.3s 0.3s;
+        }
+        &.menu-bottom-click {
+          backface-visibility: hidden;
+          top: 15px;
+          transform: rotate(-360deg);
+          transition: 0.3s 0.3s;
+        }
+      }
+    }
+  }
+  &.header-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 70px;
+    background-color: $white-color;
+    @media (max-width: 991px){
+      height: 70px;
+    }
+    #navbar-main{
+      height: 70px;
+    }
+    .brand-logo {
+      a {
+        img {
+          width: 125px;
+          height: 100px;
+          object-fit: contain;
+          object-position: center;
+          @media (max-width: 991px){
+            width: 70px;
+            height: 70px;
+          }
+        }
+      }
+    }
+    .header-menu {
+      .menu-icon {
+        margin-top: 35px;
+        @media (max-width: 991px){
+          margin-top: 22px;
+        }
+      }
+    }
+  }
+  #navbar-main{
+    > .container{
+      display: flex;
+      height: 100%;
+      align-content: center;
+      align-items: center;
+      .secondary-menu-wrapper{
+        margin-left: auto;
+        height: 100%;
+        > .nav{
+          height: 100%;
+          li{
+            a{
+              height: 100%;
+              display: flex;
+              align-content: center;
+              align-items: center;
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 27px;
+              border-left: 1px solid #D3D3D3;
+              padding: 0 30px;
+              &:last-child{
+                border-right: 1px solid #D3D3D3;
+              }
+            }
+            a:hover,a.is-active{
+              background: $yellow-bg;
+            }
+          }
+        }
+      }
+      .assure-header-right{
+        position: relative;
+        ul{
+          margin-bottom: 0px;
+          list-style-type: none;
+          li{
+            display: inline-block;
+            margin-right: 30px;
+            &:last-child{
+              margin-right: 0px;
+            }
+            a{
+              width: 48px;
+              height: 48px;
+              background: #fff;
+              display: flex;
+              flex-wrap: wrap;
+              align-content: center;
+              align-items: center;
+              box-shadow: 0px 0px 15px -6px rgba(0,0,0,0.75);
+              border-radius: 50%;
+              > div{
+                width: 100%;
+                text-align: center;
+                span{
+                  width: 19px;
+                  height: 14px;
+                  display: inline-block;
+                  background-position: center;
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  position: relative;
+                  top: 2px;
+                }
+                span.assure-icon-menu{
+                  background-image: url("../icons/icon-menu-min.png");
+                }
+                span.assure-icon-email{
+                  background-image: url("../icons/icon-email-min.png");
+                }
+                span.assure-icon-mobile{
+                  background-image: url("../icons/icon-mobile-min.png");
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

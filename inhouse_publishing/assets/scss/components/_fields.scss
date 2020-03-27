@@ -1,0 +1,174 @@
+.btn {
+  padding: 30.5px 23px;
+  width: 458px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 0;
+  color: #383838;
+  overflow: hidden;
+  border-radius: 3px;
+  &.btn-yellow,&.form-submit {
+    background-color: $primary-color;
+    color: #383838;
+    &:hover {
+      background-color: darken($primary-color, 5%) !important;
+      color: #383838;
+    }
+  }
+  &.btn-blue,&.form-submit {
+    background-color: $blue-color;
+    color: #fff;
+    &:hover {
+      background-color: darken($blue-color, 5%) !important;
+      color: #fff;
+    }
+  }
+  &.form-submit{
+    border: none;
+    &:hover,&:visited,&:active{
+      color: #383838 !important;
+      text-decoration: none !important;
+      background-color: darken($primary-color, 5%) !important;
+    }
+  }
+  &.btn-gray {
+    background-color: $gray-color-2;
+
+    &:hover {
+      background-color: darken($gray-color-2, 5%);
+    }
+  }
+
+  &.btn-blue {
+    background-color: $blue-color;
+    color: $white-color;
+
+    &:hover {
+      background-color: darken($blue-color, 5%);
+    }
+  }
+
+  &.btn-collapsed {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    line-height: 1;
+    @media (max-width: 767px) {
+      width: 100%;
+      text-align: left;
+    }
+    .btn-text {
+      display: none;
+      @media (max-width: 767px) {
+        display: inline-block;
+      }
+    }
+
+    &:hover {
+      width: 100% !important;
+
+      .btn-text {
+        display: inline-block;
+      }
+
+    }
+  }
+
+  &:active, &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .ripple-effect{
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: $white-color;
+    animation: ripple-animation 2s;
+  }
+
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+
+// CONTACT SECTION
+form {
+  .form-group:not(.field--type-image):not(.form-type-select) {
+    position: relative;
+    margin-bottom: 90px;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: auto;
+      font-size: 22px;
+      line-height: 37px;
+      letter-spacing: 0.6px;
+      font-weight: 500;
+      transition-duration: .3s;
+      color: $secondary-color;
+    }
+
+    input[type="text"], input[type="email"],input[type="tel"],input[type="password"],textarea {
+      display: block;
+      width: 100%;
+      border: none;
+      font-size: 22px;
+      line-height: 37px;
+      letter-spacing: 0.6px;
+      font-weight: 500;
+      border-bottom: 1px solid $gray-color-5;
+      outline: none;
+      padding-left: 0px;
+      border-radius: 0px;
+    }
+
+    .form-control:focus{
+      box-shadow: none;
+    }
+
+    &.field-focused {
+
+      label {
+        top: -30px;
+        font-size: 12px;
+      }
+    }
+    &.element-focus-in{
+      label {
+        color: #3C609F;
+      }
+      input[type="text"], input[type="email"],input[type="tel"],textarea{
+        border-bottom: 1px solid #3C609F;
+      }
+    }
+    &.field-has-value{
+      label{
+
+      }
+    }
+  }
+
+}
+.form-actions.webform-actions .btn.form-submit{
+  float: right;
+  max-width: 458px;
+  width: 100%;
+  font-weight: 600;
+  height: 128px;
+  padding-top: 41px;
+}

@@ -1,0 +1,41 @@
+.paragraph--type--inhouse-bookstore-panel{
+  .full-width-instore-panel{
+    min-height: 739px;
+    background-size: cover;
+    .full-width-content-box{
+      max-width: 906px;
+      background: #fff;
+      min-height: 559px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      padding: 100px;
+      position: relative;
+      top: 95px;
+      left: 65px;
+      .panel-title{
+        @include heading2;
+      }
+      .panel-content{
+
+      }
+      .panel-link{
+        a{
+          @include secondary-link;
+          color: #333;
+          &:after{
+            content: "";
+            background-image: url("../icons/icon-arrow-black.png");
+            width: 21px;
+            height: 17px;
+            display: inline-block;
+            margin-left: 15px;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+    }
+  }
+}

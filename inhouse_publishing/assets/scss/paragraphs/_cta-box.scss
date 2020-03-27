@@ -1,0 +1,41 @@
+.paragraph--type--cta-box{
+  .field--name-field-cta-box-title{
+    @include heading1;
+    margin-bottom: 50px;
+  }
+  .field--name-field-cta-box-sub-title{
+    @include sub-heading;
+    margin-bottom: 50px;
+  }
+  .field--name-field-cta-box-primary-link{
+    a{
+      @include btn;
+      @include btn-blue;
+      margin-bottom: 40px;
+      &:hover{
+        @include btn-blue-hover;
+      }
+    }
+  }
+  .field--name-field-cta-box-secondary-link{
+    a{
+      @include secondary-link;
+      display: block;
+      margin-bottom: 0px;
+      position: relative;
+      &:after{
+        content: "";
+        background-image: url("../icons/icon-arrow.png");
+        width: 21px;
+        height: 17px;
+        display: inline-block;
+        margin-left: 15px;
+        position: relative;
+        top: 2px;
+      }
+      &:hover{
+
+      }
+    }
+  }
+}

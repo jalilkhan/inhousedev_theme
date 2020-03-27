@@ -1,0 +1,54 @@
+.paragraph.growth-journey-section{
+  .growth-journey-image{
+    .field--name-field-cta-panel-image{
+      width: 80%;
+      float: none;
+      @media (max-width: 812px){
+        width: 100%;
+      }
+      img{
+        height: 661px;
+        @media (max-width: 812px){
+          height: 400px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .growth-journey-heading{
+    width: 40%;
+    height: 56%;
+    top: 8%;
+    @media (max-width: 812px){
+      top: 0px;
+      width: 100%;
+    }
+    .field--name-field-panel-heading{
+      @media (min-width: 813px) and (max-width: 1199px) {
+        font-size: 38px;
+        line-height: 56px;
+      }
+    }
+    a.btn{
+      width: 80%;
+      left: 50%;
+      max-width: 458px;
+      transform: translate(-50%);
+      font-weight: 600;
+      font-size: 30px;
+      @media (min-width: 813px) {
+        line-height: 60px;
+        height: 128px;
+      }
+      @media (max-width: 812px){
+        width: 70%;
+        top: 30px;
+        margin-bottom: 20px;
+        padding: 10px 23px;
+        left: auto;
+        transform: none;
+        font-size: 22px;
+      }
+    }
+  }
+}

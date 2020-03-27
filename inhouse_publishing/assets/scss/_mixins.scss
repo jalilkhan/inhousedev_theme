@@ -1,0 +1,66 @@
+@mixin heading1 {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 78px;
+  letter-spacing: 1.41667px;
+}
+@mixin heading3 {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+}
+@mixin heading2{
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 53px;
+  margin-bottom: 50px;
+}
+@mixin sub-heading {
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+}
+@mixin btn{
+  display: block;
+  padding: 35px 23px;
+  width: 300px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  border-radius: 0;
+  color: #FFFFFF;
+  overflow: hidden;
+  border-radius: 3px;
+}
+@mixin btn-yellow{
+  background-color: $primary-color;
+  color: #383838;
+}
+@mixin btn-blue{
+  background-color: $blue-color;
+}
+@mixin btn-yellow-hover{
+  background-color: darken($primary-color, 5%) !important;
+  color: #383838;
+}
+
+@mixin btn-blue-hover{
+  background-color: darken($blue-color, 5%) !important;
+}
+@mixin secondary-link{
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fff;
+}

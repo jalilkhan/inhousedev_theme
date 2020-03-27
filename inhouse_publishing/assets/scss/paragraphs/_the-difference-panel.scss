@@ -1,0 +1,33 @@
+.difference-section{
+  .section-heading{
+    line-height: 7.2rem;
+    @media (max-width: 1199px){
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  .difference-boxes{
+    margin-bottom: 70px;
+    padding-right: 55px;
+    @media (max-width: 575px){
+      padding-right: 15px;
+    }
+    @media (max-width: 1199px){
+      margin-bottom: 20px;
+    }
+    &:nth-child(2n+1){
+      @media (min-width: 576px) and (max-width: 1199px){
+        padding-left: 30px;
+        padding-right: 7.5px;
+      }
+    }
+    &:nth-child(2n){
+      @media (min-width: 576px) and (max-width: 1199px){
+        padding-right: 30px;
+        padding-left: 7.5px;
+      }
+    }
+    .difference-box{
+    }
+  }
+}

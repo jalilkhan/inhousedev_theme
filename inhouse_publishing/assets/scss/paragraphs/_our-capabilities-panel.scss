@@ -1,0 +1,89 @@
+.view-capabilities-accordian-listing{
+  .view-content.row{
+    > h3{
+      margin-bottom: 10px;
+      font-size: 40px;
+      line-height: 58px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: #fff;
+      width: 100%;
+      margin-top: 40px;
+      &:first-child{
+        margin-top: 0px;
+      }
+    }
+    .views-row{
+      width: 100%;
+      .views-field-name{
+        cursor: pointer;
+        @media (max-width: 767px) {
+          margin-bottom: 15px;
+        }
+        a{
+          padding: 0;
+          font-size: 28px;
+          line-height: 60px;
+          letter-spacing: .7px;
+          font-weight: normal;
+          text-align: left;
+          color: #fff;
+          text-decoration: none;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+          @media (max-width: 767px) {
+            font-size: 22px;
+            line-height: 28px;
+          }
+          &:before{
+            content: "\f067";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            background: #ffc910;
+            padding: 7px;
+            font-size: 16px;
+            margin-right: 20px;
+            top: -4px;
+            position: relative;
+            transition-duration: .3s;
+            @media (max-width: 767px) {
+              font-size: 10px;
+            }
+          }
+        }
+        &.active-accordian{
+          a{
+            &:before{
+              content: '\f00d';
+              padding: 8px 9px;
+              @media (max-width: 767px) {
+                font-size: 8px;
+              }
+            }
+          }
+        }
+      }
+      .views-field-description__value{
+        font-size: 22px;
+        line-height: 42px;
+        letter-spacing: .4px;
+        font-weight: 300;
+        color: #fff;
+        display: none;
+        max-width: 468px;
+        margin-left: 50px;
+        margin-bottom: 35px;
+        margin-top: 5px;
+        @media (max-width: 991px) {
+          margin-left: 46px;
+        }
+        &.active-desc{
+          display: none;
+        }
+        @media (max-width: 767px) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ *
+ * Example on how to alter theme settings form
+ *
+ */
+function inhouse_publishing_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+      'bg-primary' => t('Primary'),
+      'bg-secondary' => t('Secondary'),
+      'bg-light' => t('Light'),
+      'bg-dark' => t('Dark'),
+      'bg-white' => t('White'),
+      'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+      'bg-primary' => t('Primary'),
+      'bg-secondary' => t('Secondary'),
+      'bg-light' => t('Light'),
+      'bg-dark' => t('Dark'),
+      'bg-white' => t('White'),
+      'bg-transparent' => t('Transparent'),
+  );
+
+  // Site Mobile number
+  $form['assure_site_detail'] = [
+    '#type' => 'details',
+    '#title' => t('Assure Site Settings'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+    '#weight' => -1,
+  ];
+
+  $form['assure_site_detail']['inhouse_publishing_settings']['assure_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email'),
+    '#default_value' => theme_get_setting('assure_email', 'inhouse_publishing'),
+  );
+
+  $form['assure_site_detail']['inhouse_publishing_settings']['mobile_number'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Phone Number'),
+    '#default_value' => theme_get_setting('mobile_number', 'inhouse_publishing'),
+  );
+
+}
+
+/**
+ * Implements hook_preprocess_page() .
+ *
+ */
+function inhouse_publishing_preprocess_page(&$variables) {
+  global $base_url;
+  $site_config = \Drupal::config('system.site');
+  $variables['site_name'] = $site_config->get('name');
+  $variables['site_slogan'] = $site_config->get('slogan');
+  // logo needs to be placed within specified folder
+  $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('logo.url')));
+
+  $assure_email = theme_get_setting('assure_email','inhouse_publishing');
+  $phone_number = theme_get_setting('mobile_number','inhouse_publishing');
+  if($assure_email){
+    $variables['assure_email'] =  $assure_email;
+  }
+  if($phone_number){
+    $variables['phone_number'] =  $phone_number;
+  }
+}

@@ -1,0 +1,17 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      dist/assets/css/app.min.css: {}
+      assets/css/custom.css: {}
+global-scripts:
+  version: 1.x
+  js:
+    assets/js/vendor/bootstrap.js: {}
+    assets/js/vendor/popper.js: {}
+    assets/js/app.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
