@@ -180,7 +180,7 @@ var app = {
     var ulDotsCheck = setInterval(function () {
       if($('.slick-dots li').length){
         dotsCount = $('.slick-dots li').length;
-        var html = '<ul class="slick-dots" style="" role="tablist"><i class="fas fa-angle-left"></i><span>'+1+'/'+dotsCount+'</span><i class="fas fa-angle-right"></i></ul>';
+        var html = '<ul class="slick-dots" style="" role="tablist"><i class="fa fa-angle-left"></i><span>'+1+'/'+dotsCount+'</span><i class="fa fa-angle-right"></i></ul>';
         $('.slick-dots').html(html);
 
         clearTimeout(ulDotsCheck);
@@ -194,10 +194,10 @@ var app = {
 
       $('.slick-dots span').html(i+'/'+totalSlides)
     });
-    $('body').on('click','.slick-dots .fas.fa-angle-left',function () {
+    $('body').on('click','.slick-dots .fa.fa-angle-left',function () {
       $('.slick__arrow .slick-prev').trigger('click');
     })
-    $('body').on('click','.slick-dots .fas.fa-angle-right',function () {
+    $('body').on('click','.slick-dots .fa.fa-angle-right',function () {
       $('.slick__arrow .slick-next').trigger('click');
     })
 
